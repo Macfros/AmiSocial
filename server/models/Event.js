@@ -20,7 +20,7 @@ const eventSchema = mongoose.Schema(
     },
     eventDesc: {
       type: String,
-      requires: true
+      required: true
     },
     eventPicture: {
       type: String,
@@ -29,6 +29,14 @@ const eventSchema = mongoose.Schema(
     eventApplyLink: {
       type: String,
       default: ""
+    },
+    eventDate: {
+      type: Date,
+      required: true
+    },
+    eventRegEndDate: {
+      type: Date,
+      required: true
     },
     department: String,
   }, {timestamps: true}

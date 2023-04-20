@@ -32,6 +32,7 @@ function App() {
               path="/profile/:userId"
               element={isAuth ? <ProfilePage /> : <Navigate to="/" />}
             />
+            //Add route path for Event's page
           </Routes>
         </ThemeProvider>
       </BrowserRouter>

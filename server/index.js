@@ -62,8 +62,6 @@ app.use("/users",userRoutes);                //and the middleware which will han
 app.use("/posts", postRoutes);              // authroutes, userroutes, post routes
 app.use("/events", eventRoutes);
 
-/*MICROSOFT ACCOUNT Auth */
-
 
 //MONGOOSE Setup
 const PORT= process.env.port || 6001;
@@ -77,6 +75,6 @@ mongoose.connect(process.env.MONGO_URL, {
   /*ADD DATA ONE TIME */
   // User.insertMany(users);
   // Post.insertMany(posts);
-  //Event.insertMany(events);
+  // Event.insertMany(events);
 
 }).catch((error) => console.log(`${error} did not connect`));

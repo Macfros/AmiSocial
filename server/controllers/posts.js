@@ -61,7 +61,7 @@ export const likePost = async (req, res) => {
     const {userId} = req.body;
 
     const post = await Post.findById(id);      //Grabbing the post information
-    const isLiked= posts.likes.get(userId);   //Grabbing whether the user has liked it or not
+    const isLiked= post.likes.get(userId);   //Grabbing whether the user has liked it or not
 
     if(isLiked){
       post.likes.delete(userId);

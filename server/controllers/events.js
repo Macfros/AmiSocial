@@ -5,7 +5,7 @@ import User from "../models/User.js";
 export const createEvent= async (req,res)=> {
   try{
 
-    const { userId, eventHead, eventDesc, eventPicture, eventApplyLink, department} = req.body;
+    const { userId, eventHead, eventDesc, eventPicture, eventApplyLink,eventDate,eventRegEndDate, department} = req.body;
     const user = await User.findById(userId);
 
     const newEvent= new Event({
@@ -16,11 +16,14 @@ export const createEvent= async (req,res)=> {
       eventHead,
       eventDesc,
       eventApplyLink,
+      eventDate,
+      eventRegEndDate
     })
+
 
     await newEvent.save();
 
-    const post=await Event.find();
+    const event=await Event.find();
     res.status(201).json(event);
   } catch(err) {
     res.status(409).json({message: err.message});
@@ -33,17 +36,17 @@ export const createEvent= async (req,res)=> {
 export const getFeedEvents = async (req,res) => {
   try{
     const event= await Event.find();
-    res.staus(200).json(post);
+    res.status(200).json(event);
   } catch(err) {
-    res.ststus(404).json({ message: err.message });
+    res.status(404).json({ message: err.message });
   }
 }
 
 
 export const getUserEvents = async (req,res) => {
   try{
-    const {userId}= req.params;
-    const post=await Event.find({ userId});
+    const {userId} = req.params;
+    const event=await Event.find({ userId});
     res.status(200).json(event);
   } catch(err){
     res.status(404).json({ message: err.message});

@@ -9,9 +9,6 @@ const userIds = [
   new mongoose.Types.ObjectId(),
   new mongoose.Types.ObjectId(),
   new mongoose.Types.ObjectId(),
-  new mongoose.Types.ObjectId(),
-  new mongoose.Types.ObjectId(),
-  new mongoose.Types.ObjectId(),
 ];
 
 export const users = [
@@ -290,41 +287,41 @@ export const posts = [
 export const events = [
   {
       _id: new mongoose.Types.ObjectId(),
-      userId: userIds[8],
+      userId: userIds[1],
       firstName: "Anjani",
       lastName: "Jain",
       eventHead: "Symposium",
       eventDesc: "It is a Oxford Debate competition",
       eventPicture: "event1.jpeg",
       eventApplyLink: "",
-      eventDate: new Date("2023-5-18"),
-      eventRegEndDate: new Date("2023-5-12"),
+      eventDate: new Date("2023-05-20T12:00:00.000Z"),
+      eventRegEndDate: new Date("2023-05-15T12:00:00.000Z"),
       department: "ALS"
   },
   {
     _id: new mongoose.Types.ObjectId(),
-    userId: userIds[9],
+    userId: userIds[2],
     firstName: "Ayush",
     lastName: "Chikkara",
     eventHead: "Laya Kari",
     eventDesc: "It is a Musical Jamming Session",
     eventPicture: "event2.jpeg",
     eventApplyLink: "",
-    eventDate: new Date("2023-5-20"),
-    eventRegEndDate: new Date("2023-5-14"),
+    eventDate: new Date("2023-05-21T12:00:00.000Z"),
+    eventRegEndDate: new Date("2023-05-16T12:00:00.000Z"),
     department: "ASET"
   },
   {
     _id: new mongoose.Types.ObjectId(),
-    userId: userIds[10],
+    userId: userIds[3],
     firstName: "Puneet",
     lastName: "Sharma",
     eventHead: "Magnus'23",
     eventDesc: "It is a e-gaming competition",
     eventPicture: "event3.jpeg",
     eventApplyLink: "",
-    eventDate: new Date("2023-5-19"),
-    eventRegEndDate: new Date("2023-5-13"),
+    eventDate: new Date("2023-05-19T12:00:00.000Z"),
+    eventRegEndDate: new Date("2023-05-14T12:00:00.000Z"),
     department: "ASET"
   },
 ];
